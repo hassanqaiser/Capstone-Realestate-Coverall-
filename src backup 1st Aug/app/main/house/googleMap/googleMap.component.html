@@ -1,0 +1,30 @@
+<div class="row">
+
+    <div class="col-md-12" >
+      <sebm-google-map class="map" style="overflow: hidden; background-color: rgb(229, 227, 223);"
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+        [zoomControl]="true"
+        [usePanning]="true"
+        [scaleControl]="true"
+        [draggable]="true">
+      
+        <sebm-google-map-marker 
+            *ngFor="let house of houses; let i = index"
+            [latitude]="house.lat"
+            [longitude]="house.lng"
+            [markerDraggable]="false">
+
+          <sebm-google-map-info-window [disableAutoPan]="true">
+            <card [house_details]="house"></card>
+          </sebm-google-map-info-window>
+        </sebm-google-map-marker>
+
+
+      </sebm-google-map>
+
+    </div>
+
+</div>

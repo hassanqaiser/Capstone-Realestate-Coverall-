@@ -1,0 +1,12 @@
+ <div class="row grid-container">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let house of houses;trackBy:trackby.house">
+
+        <card [house_details]="house"> </card>
+
+    </div>
+    <div *ngIf="!houses.length">
+        No Records Found
+    </div>
+</div>
+
+

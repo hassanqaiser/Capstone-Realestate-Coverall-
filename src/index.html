@@ -1,17 +1,72 @@
-<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>RealEstateQ</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="vendor/@angular2-material/core/overlay/overlay.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+<head>
+    <title>Coverall</title>
+    <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- IOS WebApp-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    <!-- Android WebApp-->
+    <!--<link rel="manifest" href="manifest.json" />-->
+
+    <!-- Mobile Screen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
+    
+    <!-- Bootstrap-->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap-theme.min.css" rel="stylesheet" />
+    
+    <!-- Custom Styles-->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+
+    <!-- MD Icons-->
+     <link href="/assets/css/icon.css" rel="stylesheet">
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+     <!-- Google Maps-->
+     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqeTvGGnuqDJSfIcOpjTCeqLPpx7LVOQ"></script>-->
+
 </head>
+
 <body>
-  <app-root>Loading...</app-root>
+    <my-app>
+        Loading...
+    </my-app>
+
+    <footer>
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner footer">
+                <div class="container">
+                    <footer>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Copyrighted by Coverall
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+      // service worker register
+      if(navigator.serviceWorker){
+    		navigator.serviceWorker.register('sw.js', {scope:'/'})
+        .then(function(registration){
+          console.log("ServiceWorker Registered!");
+    		}).catch(function(error){
+          console.log("ServiceWorker Failed!");
+    		});
+      }
+    </script>
 </body>
+
 </html>

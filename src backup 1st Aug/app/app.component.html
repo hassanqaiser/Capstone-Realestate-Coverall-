@@ -1,0 +1,44 @@
+<md-sidenav-layout class="demo-sidenav-layout">
+    <md-sidenav #end align="start" mode="push">
+        <div class="cl-user__details">
+            <div class="cl-user__photo">
+                <img alt="profil" class="cl-circle" src="{{photoUrl}}">
+            </div>
+            <div class="cl-user__info">
+                <p>{{userName}}</p>
+                <p>{{userEmail}}</p>
+            </div>
+        </div>
+        <nav class="" id="navigation" role="navigation">
+            <ul class="nav">
+                <li>
+                    <a [routerLink]="['/houses']" (click)="end.close()"><i class="material-icons">account_balance</i><span>Houses</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/apartment']" (click)="end.close()"><i class="material-icons">bookmark</i><span>Apartments</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/plots']" (click)="end.close()"><i class="material-icons">texture</i><span>Plots</span></a>
+                    <!--<a (click)="onSignOut()" style="cursor: pointer;"><i class="material-icons">exit_to_app</i><span>Sign Out</span></a>-->
+                </li>
+                <li>
+                    <a [routerLink]="['/agents']" (click)="end.close()"><i class="material-icons">group_work</i><span>Agents</span></a>
+                </li>
+            </ul>
+        </nav>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+
+        <md-icon class="material-icons menuIcon" (click)="end.toggle()">menu</md-icon>
+
+        Coverall <i class="material-icons">keyboard_arrow_right</i> {{title}}
+
+        <a style="margin-right:20px;" [routerLink]="['/signin']"><span>Sign In</span></a>
+            
+    </md-toolbar>
+
+    <div class="app-content">
+        <router-outlet></router-outlet>
+    </div>
+</md-sidenav-layout>

@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "Houses": {
+      ".read": true, 
+      ".write": true
+    }
+  }
+}

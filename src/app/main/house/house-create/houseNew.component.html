@@ -1,0 +1,166 @@
+<!--<div>
+  <form  class="editForm">
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" class="form-control" name="city" [(ngModel)]="house.city" #city="ngModel" required>
+      <div class="alert alert-danger" [hidden]="city.valid">First Name is required</div>
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" class="form-control" name="location" [(ngModel)]="house.location" #location="ngModel" required>
+      <div class="alert alert-danger" [hidden]="location.valid">Last Name is required</div>
+    </div>
+    <div class="form-group">
+      <label>type</label>
+      <textarea type="text" class="form-control" name="type" [(ngModel)]="house.type" #type="ngModel" required></textarea>
+      <div class="alert alert-danger" [hidden]="type.valid">Message is required</div>
+    </div>
+   
+    <button class="btn btn-default" (click)="onCancel($event)">Cancel</button>&nbsp;&nbsp;
+    <input type="text" class="btn btn-success" [disabled]="!houseForm.valid" value="Post">
+    <div class="alert alert-danger" *ngIf="errorMessage != null">{{ errorMessage }}</div>
+  </form>
+</div>-->
+
+	<div class="row">
+		 <form style="margin:auto;" class="form-horizontal" >
+            <fieldset style="padding:10px;">
+
+                <!-- owner input-->
+                <div class="form-group">
+                    <label class="control-label">Owner Name</label>
+
+                      <input id="owner" name="owner" [(ngModel)]="house.owner" type="text" placeholder="Owner"
+                      class="form-control">
+                      <p class="help-block"></p>
+
+                </div>
+ 
+                <div class="form-group">
+                    <label class="control-label">Type</label>
+
+                    <input id="type" [(ngModel)]="house.type" class="form-control" name="type" list="typeList"
+                        placeholder="Residential">
+
+                    <datalist id="typeList">
+                        <option value="Residential">
+                        <option value="Commercial">
+                        <option value="Industrial">
+                        <option value="Agricultural">
+                    </datalist>
+                    <p class="help-block"></p>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Buy/Sell/Rent</label>
+
+                    <input id="purpose" [(ngModel)]="house.purpose" class="form-control" name="purpose" list="purposeList"
+                            placeholder="Buy">
+
+                        <datalist id="purposeList">
+                            <option value="Buy">
+                            <option value="Rent">
+                            <option value="Wanted">
+                        </datalist>
+                    <p class="help-block"></p>
+
+                </div> 
+
+                <!-- location input-->
+                <div class="form-group">
+                    <label class="control-label">Location</label>
+
+                    <input id="location" [(ngModel)]="house.location" class="form-control" name="location" list="locationList"
+                        placeholder="Location">
+
+                    <datalist id="locationList">
+                        <option value="Defence Raya">
+                        <option value="Defence Phase 1">
+                        <option value="Defence Phase 2">
+                        <option value="Defence Phase 3">
+                        <option value="Defence Phase 4">
+                        <option value="Defence Phase 5">
+                        <option value="Defence Phase 6">
+                        <option value="Defence Phase 7">
+                        <option value="Defence Phase 8">
+                        <option value="Defence Phase 9">
+                    </datalist>
+                    <p class="help-block"></p>
+
+                </div>
+                <!-- address input-->
+                <div class="form-group">
+                    <label class="control-label">Address</label>
+
+                    <input id="address" name="address" [(ngModel)]="house.address" type="text" placeholder="address"
+                    class="form-control">
+                    <p class="help-block">Apartment, suite , unit, building, floor, Street address, P.O. box</p>
+
+                </div>
+                <!-- city input-->
+                <div class="form-group">
+
+                    <input id="city" [(ngModel)]="house.city" class="form-control" name="city" list="cityList"
+                        placeholder="City">
+                    <p class="help-block"></p>
+                    <datalist id="cityList">
+                        <option value="Lahore">
+                        <option value="Islamabad">
+                        <option value="Karachi">
+                    </datalist>
+
+                </div>    
+                <div class="form-group">
+                    <label class="control-label">bedrooms</label>
+
+                      <input id="bedrooms" name="bedrooms" [(ngModel)]="house.bedrooms" type="number" placeholder="bedrooms"
+                      class="form-control">
+                      <p class="help-block"></p>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label">bathrooms</label>
+
+                      <input id="bathrooms" name="bathrooms" [(ngModel)]="house.bathrooms" type="number" placeholder="bathrooms"
+                      class="form-control">
+                      <p class="help-block"></p>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label">area</label>
+
+                      <input id="area" name="area" [(ngModel)]="house.area" type="number" placeholder="area"
+                      class="form-control">
+                      <p class="help-block"></p>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label">price</label>
+
+                      <input id="price" name="price" [(ngModel)]="house.price" type="number" placeholder="price"
+                      class="form-control">
+                      <p class="help-block"></p>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Additional Details</label>
+
+                      <input id="additionalDetails" name="additionalDetails" [(ngModel)]="house.additionalDetails" type="text" placeholder="Additional Details"
+                      class="form-control">
+                      <p class="help-block"></p>
+
+                </div>
+                <div class="form-group">
+                    <label for="myFile" class="control-label">Select Files</label>
+                    <input type="file" id="myFile" multiple size="50" (change)="myFunction($event)">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-default" (click)="onCancel($event)">Cancel</button>&nbsp;&nbsp;
+                    <button class="btn btn-success" (click)="save($event)">Save</button>                 
+                </div>
+
+            </fieldset>
+
+        </form>
+	</div>

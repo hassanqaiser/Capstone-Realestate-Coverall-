@@ -1,0 +1,37 @@
+
+<div class="listing-item" tabindex="0">
+    <div class="item-cover type-2">
+        <div class="cover">
+            <p>{{house_details.additionalDetails}}</p>
+
+            <a [routerLink]="['/houses',house_details.id]">
+                <i class="icon"></i>
+            </a>
+        </div>
+        <img class="img-responsive" src={{house_details.imgUrl}} alt={{house_details.imgAlt}}>
+    </div>
+
+    <div class="item-body">           
+        <div class="block services">
+            <p class="caption">Services</p>
+            <ul>
+                <li class="bathrooms">Bathrooms: <span>{{house_details.bathrooms}}</span></li>
+                <li class="bedrooms">Bedrooms: <span>{{house_details.bedrooms}}</span></li>
+                <li class="area">Area: <span>{{house_details.area}}</span></li>
+            </ul>
+        </div>
+
+        <div class="block location-info">
+            <div class="location">
+                <h3>
+                    <a [routerLink]="['/houses',house_details.id]">More Details</a>
+                </h3>
+                <p>{{house_details.address}}</p>
+            </div>
+
+            <div class="price">
+                <p>{{house_details.price}} $<span>{{house_details.purpose}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

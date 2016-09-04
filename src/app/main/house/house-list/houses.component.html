@@ -1,0 +1,37 @@
+
+    
+    <div class="row">
+        <div *ngIf="onlineStatus" style="cursor:pointer;" class="col-sm-3 col-xs-4 col-md-2">
+            <a (click)="changeDisplayMode(displayModeEnum.Grid)" [class.active]="displayMode === displayModeEnum.Grid" tabindex="0">
+                <span class="glyphicon glyphicon-align-justify"></span> Map View
+            </a>
+        </div>        
+        <div style="cursor:pointer;" class="col-sm-3 col-xs-4 col-md-2">
+            <a  (click)="changeDisplayMode(displayModeEnum.Card)" [class.active]="displayMode === displayModeEnum.Card" tabindex="0">
+                <span class="glyphicon glyphicon-th-large"></span> Card View
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="margin:5px;" class="col-sm-3 col-xs-8 col-md-2">
+            <filter-textbox [placeholderTxt]="placeholderTxtCity"
+                (changed)="filterChanged($event, 'city')"></filter-textbox>
+        </div>
+        <div style="margin:5px;" class="col-sm-3 col-xs-8 col-md-2">
+            <filter-textbox [placeholderTxt]="placeholderTxtType"
+                (changed)="filterChanged($event, 'type')"></filter-textbox>
+        </div>
+        <div style="margin:5px;" class="col-sm-3 col-xs-8 col-md-2">
+            <filter-textbox [placeholderTxt]="placeholderTxtLocation"
+                (changed)="filterChanged($event, 'location')"></filter-textbox>                 
+        </div>
+    </div>
+
+    <houses-card 
+        [houses]="filteredhouses" 
+        [hidden]="displayMode !== displayModeEnum.Card"></houses-card>
+
+    <houses-grid *ngIf="onlineStatus"
+        [houses]="filteredhouses" 
+        [hidden]="displayMode !== displayModeEnum.Grid"></houses-grid>                 

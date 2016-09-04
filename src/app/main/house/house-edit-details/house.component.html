@@ -1,0 +1,151 @@
+<div class="container" style="margin-top:10px;">
+	 <div class="row form-group">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-image">
+                    <imgCarousel> </imgCarousel>
+                </div>
+                <div class="panel-body">
+                    <googleMap [houses]="house_details"> </googleMap>
+                </div>
+                <div class="panel-footer text-center">
+                    <a routerLink="/houses">View all Houses</a>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-6" *ngFor="let house of house_details;trackBy:trackby.house">
+            <div>
+                <form  style="margin:auto;" class="form-horizontal">
+                    <fieldset>
+
+                        <!-- owner input disabled-->
+                        <div class="form-group">
+                            <label class="control-label">Owner Name</label>
+
+                            <input disabled  id="owner" name="owner" value={{house.owner}} type="text" placeholder="Owner"
+                            class="form-control">
+                            <p class="help-block"></p>
+
+                        </div>
+        
+                        <div class="form-group">
+                            <label class="control-label">Type</label>
+
+                            <input disabled  id="type" value={{house.type}} class="form-control" name="type" list="typeList"
+                                placeholder="Residential">
+
+                            <datalist id="typeList">
+                                <option value="Residential">
+                                <option value="Commercial">
+                                <option value="Industrial">
+                                <option value="Agricultural">
+                            </datalist>
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Buy/Sell/Rent</label>
+
+                            <input disabled  id="purpose" value={{house.purpose}} class="form-control" name="purpose" list="purposeList"
+                                    placeholder="Buy">
+
+                                <datalist id="purposeList">
+                                    <option value="Buy">
+                                    <option value="Rent">
+                                    <option value="Wanted">
+                                </datalist>
+                            <p class="help-block"></p>
+
+                        </div> 
+
+                        <div class="form-group">
+                            <label class="control-label">Location</label>
+
+                            <input disabled  id="location" value={{house.location}} class="form-control" name="location" list="locationList"
+                                placeholder="Location">
+
+                            <datalist id="locationList">
+                                <option value="Defence Raya">
+                                <option value="Defence Phase 1">
+                                <option value="Defence Phase 2">
+                                <option value="Defence Phase 3">
+                                <option value="Defence Phase 4">
+                                <option value="Defence Phase 5">
+                                <option value="Defence Phase 6">
+                                <option value="Defence Phase 7">
+                                <option value="Defence Phase 8">
+                                <option value="Defence Phase 9">
+                            </datalist>
+                            <p class="help-block"></p>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Address</label>
+
+                            <input disabled  id="address" name="address" value={{house.address}} type="text" placeholder="address"
+                            class="form-control">
+                            <p class="help-block">Apartment, suite , unit, building, floor, Street address, P.O. box</p>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input disabled  id="city" value={{house.city}} class="form-control" name="city" list="cityList"
+                                placeholder="City">
+                            <p class="help-block"></p>
+                            <datalist id="cityList">
+                                <option value="Lahore">
+                                <option value="Islamabad">
+                                <option value="Karachi">
+                            </datalist>
+
+                        </div>    
+                        <div class="form-group">
+                            <label class="control-label">bedrooms</label>
+
+                            <input disabled  id="bedrooms" name="bedrooms" value={{house.bedrooms}} type="number" placeholder="bedrooms"
+                            class="form-control">
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">bathrooms</label>
+
+                            <input disabled  id="bathrooms" name="bathrooms" value={{house.bathrooms}} type="number" placeholder="bathrooms"
+                            class="form-control">
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">area</label>
+
+                            <input disabled  id="area" name="area" value={{house.area}} type="number" placeholder="area"
+                            class="form-control">
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">price</label>
+
+                            <input disabled  id="price" name="price" value={{house.price}} type="number" placeholder="price"
+                            class="form-control">
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Additional Details</label>
+
+                            <input disabled  id="additionalDetails" name="additionalDetails" value={{house.additionalDetails}} type="text" placeholder="Additional Details"
+                            class="form-control">
+                            <p class="help-block"></p>
+
+                        </div>
+                
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+	</div>
+</div>
+
