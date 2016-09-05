@@ -4,10 +4,12 @@ import { Component, Output, Input, EventEmitter } from '@angular/core';
   selector: 'filter-textbox',
   template: `
 
-         <input type="text" name="filter"
-                [(ngModel)]="model.filter" 
-                (keyup)="filterChanged($event)"
-                placeholder="{{placeholderText}}"  />
+  <div class="form-group label-static">
+      <input class="form-control" type="text" name="filter"
+            [(ngModel)]="model.filter" 
+            (keyup)="filterChanged($event)"
+            placeholder="{{placeholderText}}"  />
+  </div>
 
   `
 })

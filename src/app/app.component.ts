@@ -14,7 +14,7 @@ declare var $: JQueryStatic;
 @Component({
     selector: 'my-app',
     templateUrl: 'app.component.html',
-    styleUrls:['app.component.css'],
+    // styleUrls:['app.component.css'],
     directives: [ROUTER_DIRECTIVES, MD_SIDENAV_DIRECTIVES, MD_TOOLBAR_DIRECTIVES]
 })
 

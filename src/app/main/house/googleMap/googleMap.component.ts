@@ -12,31 +12,6 @@ import {
 	styles:[`
 
 			.sebm-google-map-container {
-		    height: 100%;
-		    width: 100%;
-		  }
-			.sebm-google-map-container-inner {
-				width: 100%;
-			}
-		@media (min-width: 992px) {
-		  .sebm-google-map-container {
-		    height: 600px;
-		    width: 900px;
-		  }
-			.sebm-google-map-container-inner {
-				width: 100%;
-			}
-		  .map {
-		    position: absolute;
-		    top: 5;
-		    left: 5;
-		    width: 100%;
-		    height: 600px;
-		  }
-		}
-		@media (max-width: 992px) {
-			.sebm-google-map-container {
-		    height: 520px;
 		    width: 100%;
 		  }
 			.sebm-google-map-container-inner {
@@ -47,39 +22,29 @@ import {
 		    top: 5;
 		    left: 5;
 		    width: 100%;
-		    height: 520px;
+		  }
+		@media (max-width: 1440px) {
+			.sebm-google-map-container {
+		    height: 620px;
+		  }
+		  .map {
+		    height: 620px;
 		  }
 		}
 		@media (max-width: 768px) {
 		  .sebm-google-map-container {
-		    height: 420px;
-		    width: 100%;
+		    height: 560px;
 		  }
-			.sebm-google-map-container-inner {
-				width: 100%;
-			}
 			.map {
-				position: absolute;
-		    top: 5;
-		    left: 5;
-		    width: 100%;
-		    height: 420px;
+		    height: 560px;
 		  }
 		}
 		@media (max-width: 450px) {
 		  .sebm-google-map-container {
-		    height: 320px;
-		    width: 100%;
+		    height: 460px;
 		  }
-			.sebm-google-map-container-inner {
-				width: 100%;
-			}
 			.map {
-				position: absolute;
-		    top: 5;
-		    left: 5;
-		    width: 100%;
-		    height: 320px;
+		    height: 420px;
 		  }
 		}
 		

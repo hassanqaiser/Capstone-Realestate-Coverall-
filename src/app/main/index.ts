@@ -7,29 +7,6 @@ import {
   provideLazyMapsAPILoaderConfig
 } from 'angular2-google-maps/core';
 
-import {MdCardModule} from '@angular2-material/card';
-import {MdButtonModule} from '@angular2-material/button';
-import {MdIconModule} from '@angular2-material/icon';
-import {MdButtonToggleModule} from '@angular2-material/button-toggle/button-toggle';
-import {MdCheckboxModule} from '@angular2-material/checkbox/checkbox';
-import {MdRadioModule} from '@angular2-material/radio/radio';
-import {MdSlideToggleModule} from '@angular2-material/slide-toggle/slide-toggle';
-import {MdSliderModule} from '@angular2-material/slider/slider';
-import {MdListModule} from '@angular2-material/list/list';
-import {MdGridListModule} from '@angular2-material/grid-list/grid-list';
-import {MdProgressCircleModule} from '@angular2-material/progress-circle/progress-circle';
-import {MdProgressBarModule} from '@angular2-material/progress-bar/progress-bar';
-import {MdInputModule} from '@angular2-material/input/input';
-import {MdTabsModule} from '@angular2-material/tabs/tabs';
-import {MdToolbarModule} from '@angular2-material/toolbar/toolbar';
-import {MdSidenavModule} from '@angular2-material/sidenav/sidenav';
-import {MdTooltipModule} from '@angular2-material/tooltip/tooltip';
-import {MdRippleModule} from '@angular2-material/core/ripple/ripple';
-import {PortalModule} from '@angular2-material/core/portal/portal-directives';
-import {OverlayModule} from '@angular2-material/core/overlay/overlay-directives';
-import {MdMenuModule} from '@angular2-material/menu/menu';
-import {RtlModule} from '@angular2-material/core/rtl/dir';
-
 import { mainRoutes }       from './mainRoutes';
 import { AuthModule } from '../auth';
 import { sharedModule }       from '../shared';
@@ -62,28 +39,6 @@ import { FilterTextboxComponent } from '../shared/components/filterTextbox.compo
   ],
   imports: [
     HttpModule,
-    MdCardModule,
-    MdButtonModule,
-    MdIconModule,
-    MdButtonToggleModule,
-    MdCheckboxModule,
-    MdRadioModule,
-    MdSlideToggleModule,
-    MdSliderModule,
-    MdSidenavModule,
-    MdListModule,
-    MdGridListModule,
-    MdProgressCircleModule,
-    MdProgressBarModule,
-    MdInputModule,
-    MdTabsModule,
-    MdToolbarModule,
-    MdTooltipModule,
-    MdRippleModule,
-    PortalModule,
-    OverlayModule,
-    MdMenuModule,
-    RtlModule,
     mainRoutes,
     CommonModule,
     AuthModule,

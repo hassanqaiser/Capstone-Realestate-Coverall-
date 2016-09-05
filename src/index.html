@@ -29,22 +29,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
-    
+
     <!-- Bootstrap-->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/css/bootstrap-theme.min.css" rel="stylesheet" />
-    
-    <!-- Custom Styles-->
-    <link href="/assets/css/styles.css" rel="stylesheet" />
 
     <!-- MD Icons-->
-     <link href="/assets/css/icon.css" rel="stylesheet">
+     <link href="/assets/css/icon.css?family=Material+Icons" rel="stylesheet">
+     <link href="/assets/css/css.css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
+
 
      <!-- Google Maps-->
      <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqeTvGGnuqDJSfIcOpjTCeqLPpx7LVOQ"></script>-->
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/dist/css/ripples.min.css">
 
 </head>
 
@@ -53,23 +53,8 @@
         Loading...
     </my-app>
 
-    <footer>
-        <div class="navbar navbar-fixed-bottom">
-            <div class="navbar-inner footer">
-                <div class="container">
-                    <footer>
-                        <div class="row">
-                            <div class="col-md-12">
-                                Copyrighted by Coverall
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script>
-      // service worker register
+      service worker register
       if(navigator.serviceWorker){
     		navigator.serviceWorker.register('sw.js', {scope:'/'})
         .then(function(registration){
@@ -79,6 +64,16 @@
     		});
       }
     </script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <script src="/assets/css/dist/js/material.min.js"></script>
+    <script src="/assets/css/dist/js/ripples.min.js"></script>
+    <script>
+    $(function () {
+        $.material.init();
+    });
+    </script> 
 </body>
 
 </html>

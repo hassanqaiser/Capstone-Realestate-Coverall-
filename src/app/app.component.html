@@ -1,7 +1,7 @@
-  <div id="wrapper">
+  <!--<div id="wrapper">
         <div class="overlay"></div>
     
-        <!-- Sidebar -->
+
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
@@ -31,7 +31,6 @@
                 </li>
             </ul>
         </nav>
-        <!-- /#sidebar-wrapper -->
 
       <div class="navbar-header">
         
@@ -53,4 +52,49 @@
             </div>
         </div>
 
+    </div>-->
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="javascript:void(0)">Coverall</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+                <a id="hlink" *ngIf="af.auth | async" [routerLink]="['/houses']" data-toggle="offcanvas">
+                <span class="glyphicon glyphicon-home"></span>
+                <span>Houses</span></a>          
+            </li>
+            <li>
+                <a id="hlink" *ngIf="af.auth | async" [routerLink]="['/houses/new']" data-toggle="offcanvas">
+                <span class="glyphicon glyphicon-plus"></span>
+                <span>New</span></a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a id="hlink" *ngIf="!(af.auth | async)" [routerLink]="['signin']" data-toggle="offcanvas">
+                <span class="glyphicon glyphicon-log-in"></span>
+                <span>Sign In</span></a>
+            </li>
+            <li>
+                <a id="hlink" *ngIf="af.auth | async" (click)="signOut()" data-toggle="offcanvas">
+                <span class="glyphicon glyphicon-log-out"></span>
+                <span>Sign Out</span></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
     </div>
+    
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>
+        

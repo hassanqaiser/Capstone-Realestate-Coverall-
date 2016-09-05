@@ -13,33 +13,75 @@ import { LoadingContainer } from '../../shared/components/loading-container';
   template: `
     <div class="login">
     <loading-container [loading]="isRunning">
-    <form style="margin:auto;" (ngSubmit)="onSubmit()">
-        <md-card>
-            <img class="login__img" src="assets/img/C.png" alt="Clamarque">
-            <md-input [(ngModel)]="email" name="email" type="email" placeholder="Email" required></md-input>
-            <md-input [(ngModel)]="password" name="password" type="password" placeholder="Password" required></md-input>
-            <button class="sign-in__button" md-raised-button type="submit">Sign In</button>
-            <div class="login__error">{{msg}}</div>
 
-            <div class="hr-with-words"><span>or</span></div>
-            <br>
-            <button class="sign-in__button" md-raised-button (click)="signInWithGithub()">
-                <img class="sign-in_img" src="/assets/img/google-login.png" alt="Google icon" title="Google icon">
-                Use My GitHub Account
-            </button>
-            <button class="sign-in__button" md-raised-button (click)="signInWithGoogle()">
-                <img class="sign-in_img" src="/assets/img/google-login.png" alt="Google icon" title="Google icon">
-                Use My Google Account
-            </button>
-            <button class="sign-in__button" md-raised-button (click)="signInWithTwitter()">
-                <img class="sign-in_img" src="/assets/img/google-login.png" alt="Google icon" title="Google icon">
-                Use My Twitter Account
-            </button>
+    <form class="form-horizontal" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <img class="login__img" src="assets/img/C.png" alt="Coverall">
+            </div>
+            <div class="form-group label-floating">
+
+                <div class="col-md-10">
+                    <input [(ngModel)]="email" type="email" class="form-control" id="email" 
+                    name="email_" #email_="ngModel"  placeholder="Email" required>
+                     <div class="alert alert-danger" [hidden]="email_.valid">Email is required</div>
+                </div>
+                
+            </div>
+            <div class="form-group label-floating">
+
+                <div class="col-md-10">
+                    <input [(ngModel)]="password" type="password" class="form-control" 
+                    id="password" name="pwd" #pwd="ngModel" placeholder="Password" required>
+                     <div class="alert alert-danger" [hidden]="pwd.valid">Password is required</div>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+
+                <div class="col-md-10">
+                    <button class="btn-lg .btn-block .btn-raised" type="submit">Sign In</button>
+                </div>
+                
+            </div>
+
             
-        </md-card>
+
+            <div class="hr-with-words"><span>or</span></div><br>
+            
+            <div class="form-group">
+
+                <div class="col-md-10">
+                    <button class="btn-lg .btn-block .btn-raised" (click)="signInWithGithub()">
+                        <img class="sign-in_img" src="/assets/img/github_login.png" alt="Google icon" title="Google icon">
+                        Use My GitHub Account
+                    </button>
+                </div>
+                
+            </div>
+            <div class="form-group">
+
+                <div class="col-md-10">         
+                    <button class="btn-lg .btn-block .btn-raised" (click)="signInWithGoogle()">
+                        <img class="sign-in_img" src="/assets/img/google-login.png" alt="Google icon" title="Google icon">
+                        Use My Google Account
+                    </button>
+                </div>
+                
+            </div>
+            <div class="form-group">
+
+                <div class="col-md-10">  
+                    <button class="btn-lg .btn-block .btn-raised" (click)="signInWithTwitter()">
+                        <img class="sign-in_img" src="/assets/img/twitter_login.jpg" alt="Google icon" title="Google icon">
+                        Use My Twitter Account
+                    </button>
+                </div>
+                
+            </div>
     </form>
     </loading-container>
-</div>
+    </div>
   `
 })
 

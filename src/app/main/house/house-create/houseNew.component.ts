@@ -14,7 +14,8 @@ import { IHouse } from '../../../shared/interfaces';
 
 @Component({
   selector: 'house-new',
-  templateUrl: 'houseNew.component.html'
+  templateUrl: 'houseNew.component.html',
+  styleUrls: ['houseNew.component.css']
 })
 export class HouseNewComponent {
 
